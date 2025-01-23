@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #343a40; /* Dark gray */
+}
+
+/* Items List */
+#items-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#items-list .card {
+    width: 18rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+#items-list .card:hover {
+    transform: translateY(-5px);
+}
+
+#items-list .card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Order Form */
+#order-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#order-form .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s;
+}
+
+#order-form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Orders Table */
+.table {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #343a40;
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #items-list {
+        justify-content: center;
+    }
+
+    #order-form {
+        margin-top: 20px;
+    }
+}
