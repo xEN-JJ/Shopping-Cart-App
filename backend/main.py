@@ -39,6 +39,7 @@ items = [
     {"id": 1, "name": "Laptop", "price": 999.99, "stock": 10},
     {"id": 2, "name": "Phone", "price": 499.99, "stock": 20},
     {"id": 3, "name": "Headphones", "price": 149.99, "stock": 15},
+    {"id": 4, "name": "Mouse", "price": 99.99, "stock": 17},
 ]
 
 orders = []
@@ -72,7 +73,7 @@ async def get_item(item_id: int):
     return item
 
 # API to create an order
-@app.post("/orders")
+@app.post("/purchase-orders")
 async def create_order(order: Order):
     item = next((i for i in items if i["id"] == order.item_id), None)
     if not item:

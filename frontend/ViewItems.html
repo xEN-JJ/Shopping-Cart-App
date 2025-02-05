@@ -30,31 +30,10 @@
             </div>
 
     <script>
-        async function submitOrder(event) {
-            event.preventDefault();
-            const itemId = document.getElementById("item-id").value;
-            const quantity = document.getElementById("quantity").value;
-
-            const response = await fetch('/orders', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ item_id: parseInt(itemId), quantity: parseInt(quantity) }),
-            });
-
-            if (response.ok) {
-                alert('Order created successfully!');
-                location.reload(); // Refresh the page to update the stock
-            } else {
-                alert('Failed to create order.');
-            }
-        }
-
         async function orderItem(itemId) {
             const quantity = prompt("Enter quantity:");
             if (quantity) {
-                const response = await fetch('/orders', {
+                const response = await fetch('/purchase-orders', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
